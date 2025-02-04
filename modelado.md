@@ -8,6 +8,8 @@
 
 1. Definición de sistema => definir el sistema *(dónde voy a trabajar)*. Para tener una definición exacta del sistema que se desea simular es necesario hacer primeramente un análisis preliminar del mismo con el fin de determinar la interacción del sistema con otros sistemas, las restricciones del sistema, las variables que interactuan dentro del sistema y sus interrelaciones, las medidas de efectividad que se van a utilizar para definir y estudiar el sistema y los resultados que se esperan obtener.
 2. Formulación del modelo => Una vez que estan definidos con exactitud los resultados que se esperan obtener del estudio el siguiente paso es definir y construir el modelo con el cual se obtendrán los resultados deseados.
+3. Colección de datos 
+4. Implementar el modelo en la computadora      
 
 > Tarea: Definir sistemas, cómo se clasifan, qué es un modelo (modelo matemático vs estadístico y qué tipos de modelos existen)
 
