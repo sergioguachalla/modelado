@@ -11,5 +11,39 @@
 3. Colección de datos 
 4. Implementar el modelo en la computadora      
 
+ ---- 
+04/02/2025
+
+5.  Validación
+
+    Las formas más comunes de validar un modelo son:
+    1. la opinión de expertos sobre los resultados de la simulación
+    2. La exactitud con la que se predicen los datos históricos.
+    3. la exactitud de la predicción del futuro.
+    4. la comprobación de falla del modelo.
+    5. la aceptación y confianza en el modelo de la persona que hará uso de los resultado que arroje el experimento de la simulación
+6. Interpretación => Existen dos tipos de documentación: técnica y manual de usuario.
+
+### Generación de números aleatorios rectangulares
+
+Deben poseer ciertas características deseables que aseguren o aumenten la confiabilidad. Tales características son:
+- Uniformemente distribuido
+- Estadísticamente independiente
+- Son reproducibles
+- Periodo largo (no se trunca en la cantidad de números)
+- Generados a través de un método rápido
+- Generados a través de un método que no requiera mucha capacidad de almacenamiento.
+
+### Generadores congruenciales lineales
++ Congruencial mixto => $$X_{n+1} = (aX_n + c) \mod m $$
+    - Xo : semilla (Xo > 0)
+    - a: multiplicador (a > 0)
+    - c : constante aditiva (c > 0)
+    - m: modulo (m > Xo), m>a, m>c)
+
+> Ejemplo
+> Se pide generar números aleatorios cuando $$ a = 5, c = 7,  X_0,  m=8$$
+
+
 > Tarea: Definir sistemas, cómo se clasifan, qué es un modelo (modelo matemático vs estadístico y qué tipos de modelos existen)
 
