@@ -22,12 +22,11 @@ def lcg(seed, a, c, m, num_terms):
     return sequence
 
 # Parameters
-a = 5
-c = 7
-m = 8
+c = 89
+m = 100
 X_0 = int(input("Enter the initial seed value (X_0): "))  # User provides the seed
 num_terms = int(input("Enter the number of terms to generate: "))
-
+a = 81
 # Generate the sequence
 random_sequence = lcg(X_0, a, c, m, num_terms)
 

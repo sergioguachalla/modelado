@@ -43,6 +43,18 @@ Deben poseer ciertas características deseables que aseguren o aumenten la confi
 
 > Ejemplo
 > Se pide generar números aleatorios cuando $$ a = 5, c = 7,  X_0,  m=8$$
+[Ejemplo](./test.py)
+***Periodo n significa que cada n números la secuencia se va repitiendo.***
+
+Existe la necesidad de establecer algunas reglas que pueden ser utilizadas en la selección de los valores de los parámetros para que el generador resultante tenga periodo completo, algunas de estas reglas se mencionan a continuación:
+#### Selección de m 
+Existen 2 opciones para seleccionar el valor apropiado de m:
+1. Seleccionar *m* de modo que sea el número primo más grande posible y que a su vez sea menor que $$P^d$$ donde p es la base del sistema (binario, decimal, etc.) que se está utilizando y d es el númeo de bits.
+2. Seleccionar *m* como $$ P^d$$   
+> Ejemplo 
+> Se pide generar números aleatorios:
+> $$ c = 89; x_0 = 5; m = 10^2; a= 81$$
+[Ejemplo](./test.py)
 
 
 > Tarea: Definir sistemas, cómo se clasifan, qué es un modelo (modelo matemático vs estadístico y qué tipos de modelos existen)
