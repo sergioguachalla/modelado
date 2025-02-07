@@ -56,6 +56,34 @@ Existen 2 opciones para seleccionar el valor apropiado de m:
 > $$ c = 89; x_0 = 5; m = 10^2; a= 81 $$
 [Ejemplo](./ejemplos/cgl_example.py)
 
+-----
+06/02
+### Selección de a
+Debe ser un número impar y no debe ser divisible entre 3 y 5. Además para asegurarnos para que tenga periodo completo seguir:
+- $(a-1)mod4$ => 4 no sea factor de $m$.
+- $(a-1)mod4 = 0$ => si $b$ factor primo de $m$
+- se selecciona a como $2^k+1$ o $10^k +1$ en ambos casos $>=2$
+
+### Selección de c
+El valor seleccionado para este parámetro puede ser cualquier constante, si se desean asegurar buenos resultados el valor de $c$ debe ser $cmod8=5$ si se trabaja en sistema binario y $c$ como $cmod200=21$ si se trabaja en sistema decimal. Más específicamente el valor de $c$ debe ser un entero impar y relativamente primo a $m$.
+### Método congruencial multiplicativo
+
+$$X_{n+1} = ax_n modm$$
+> Ejemplo
+> 
+>Generar números aleatorios de $X_{n+1} = 3X_n mod 100$
+>
+> Datos: $X_0 = 17$
+> [Ejemplo](/primer%20parcial/ejemplos/cgm_example.py)
+
+>Ejercicio
+>
+> $X_{n+1} = (8x_n +16) mod 100; x_0 = 15$
+> [Ejercicio](/primer%20parcial/ejemplos/cgm_example.py)
+
+> Ejercicio 2
+>
+>$X_{n+1} = 211 X_n mod 10^8; x_0=13$
 
 > Tarea: Definir sistemas, cómo se clasifan, qué es un modelo (modelo matemático vs estadístico y qué tipos de modelos existen)
 
