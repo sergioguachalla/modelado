@@ -85,5 +85,57 @@ $$X_{n+1} = ax_n modm$$
 >
 >$X_{n+1} = 211 X_n mod 10^8; x_0=13$
 
+
+-------
+10/02
+### Algoritmo de cuadrados medios
+Pasos:
+1. Seleccionar una semilla $(X_0)$ con $D$ dígitos ($D>3$)
+2. Sea $y_o =$ resultado de elevar $x_0$ al cuadrado.
+3. Sea $y_i =$ resultado de elevar $x_i$ al cuadrado y sera $r_i=0 ,$ D digitos del centro $\forall [=1,2,3...n]$
+4. Repetir el paso 3 hasta obtener los n números $r_i$ deseados
+
+> Ejemplo
+>
+>Generar los primeros 6 números $r_i$, apartir de la semilla $x_0=5735, D=4$
+>
+>**Solución**
+>
+> #TODO: add picture 
+
+### Algoritmo de productos medios
+1. Seleccionar una semilla $(X_0)$ con $D$ dígitos ($D>3$)
+2. Seleccionar una semilla $X_1$ con $D$ digitos ($D>3$)
+3. Sea $y_0 = x_0 * x_1$; sea $x_2=$ digitos $D$ del centro y sea $r_i = 0. D$ del centro
+4. sea $y_i=x_i*x_{i-1}; x_{i+1}=$ los d digitos del centro y sea $r_{i+1}= 0,$ D digitos del centro
+5. repetir el paso 4 hasta obtener los $n$ números $r_i$ deseados
+
+***nota:*** *si no es posible obtener los $D$ digitos del centro del número $y_i$ agregue ceros a la izquierda del mismo*
+> Ejemplo
+>
+>Generar números aleatorios $r_i$ a partir de las semillas $x_o=5015; x_1 = 5734; D = 4$
+>
+> [Solución](/primer%20parcial/ejemplos/medium_product.py)
+
+### Algoritmo del multiplicador constante
+1. Seleccionar una semilla $(X_0)$ con $D$ dígitos ($D>3$)
+2. Seleccionar una constante $a$ con $D $ digitos ($D>3$)
+3. Sea $y_0 = a * x_0$; sea $x_1=$ los $D$ digitos del centro y $r_i= 0,D$ digitos del centro.
+4. sea $y_i= a * x_{i}$; sea $x_{i+1} = $ los $D$ digitos del centro y sea $r_{i+1} = 0, D$ digitos del centro
+5. repetir el paso 4 hasta obtener $n$ números $r_i$ deseados.   
+
+>Ejemplo
+>
+>Generar los números aleatorios a partir de $x_0=9803; a=6965; D = 4$
+>
+>[Solución](/primer%20parcial/ejemplos/constant_multiplier.py) *este ejemplo no contempla el caso de añadir ceros
+
+----
+## pruebas estadísticas
+### Prueba de bondad de ajuste
+1. Se plantea la hipotesis nula 
+$$H_0 = x\sim F(x;\theta)$$
+
 > Tarea: Definir sistemas, cómo se clasifan, qué es un modelo (modelo matemático vs estadístico y qué tipos de modelos existen)
+
 
