@@ -136,6 +136,13 @@ Pasos:
 1. Se plantea la hipotesis nula 
 $$H_0 = x\sim F(x;\theta)$$
 
+-----
+$H_0: X \sim(\mu \sigma^2$)$
+
+
+$H_1:X\neq N (\mu \sigma^2)$
+
+# add exercise  
 > Tarea: Definir sistemas, cómo se clasifan, qué es un modelo (modelo matemático vs estadístico y qué tipos de modelos existen)
 
 
