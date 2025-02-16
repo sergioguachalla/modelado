@@ -142,7 +142,65 @@ $H_0: X \sim(\mu \sigma^2$)$
 
 $H_1:X\neq N (\mu \sigma^2)$
 
+
 # add exercise  
+### Ejemplo distribución exponencial
+Sea $x$=tiempo que tarda en programar (minutos)
+
+
+|X    |$n_i$|marca de clase ($\frac{L_s+L_i}{2}$)|
+|-----|-----|:----------------------------------:|
+|10-15|30   |               12,5                 |
+|15-20|25   |               17,5                 |
+|20-25|22   |               22,5                 |
+|25-30|18   |               27,5                 |
+|30-35|19   |               32,5                 |
+|35-40|12   |               37,5                 |
+|40-45|8    |               47,5                 |
+|**Total**|**134**|
+
+Se pide probar:
+
+$H_0:X\sim exp(1/\lambda)$
+
+$H_1: X\neq exp(1/\lambda)$
+
+Hallamos el estadístico
+
+$X_c^2=\frac{\sum(n_{i0}-n_{ie})^2}{n_{ie}}$
+
+$n_{ie}=nP(X=x)$
+
+Para el primer $n$ esperado
+$n_{1e}=134P(10\leq x\leq 15)$
+
+La función para la distribucion exponencial es:
+
+$f(x)=\frac{1}{\lambda}e^{-\lambda x}$
+
+$\lambda = ? \rArr E(x)=\bar{x} \rArr \lambda=\bar{x}$
+
+|X    |$n_i$|marca de clase ($\frac{L_s+L_i}{2}$)|$X_in_i$|
+|-----|-----|:----------------------------------:|----|
+|10-15|30   |               12,5                 |375|
+|15-20|25   |               17,5                 |...|
+|20-25|22   |               22,5                 |...|
+|25-30|18   |               27,5                 |...|
+|30-35|19   |               32,5                 |...|
+|35-40|12   |               37,5                 |...|
+|40-45|8    |               47,5                 |340|
+|**Total**|**134**|-----|3210|
+
+$\bar{x}=\frac{3210}{134} = 23,96$
+
+$$n_{ie}= 134\int_{10}^{15} \frac{1}{\lambda}e^{-\frac{x}{\lambda}}dx$$
+
+$$n_{ie}= 134[\frac{1}{23,96}(-\frac{1}{\frac{1}{23,96}}e^{\frac{x}{23,96}})]$$
+
+$$134[-e^{\frac{-15}{23,96}}+e^{\frac-{10}{23,96}}]$$
+
+$$=143[0,543+0,6588] \rArr n_{1e}=16,60$$ 
+*para los n esperados*
 > Tarea: Definir sistemas, cómo se clasifan, qué es un modelo (modelo matemático vs estadístico y qué tipos de modelos existen)
 
 
