@@ -200,7 +200,11 @@ $$n_{ie}= 134[\frac{1}{23,96}(-\frac{1}{\frac{1}{23,96}}e^{\frac{x}{23,96}})]$$
 $$134[-e^{\frac{-15}{23,96}}+e^{\frac-{10}{23,96}}]$$
 
 $$=143[0,543+0,6588] \rArr n_{1e}=16,60$$ 
+
+
 *para los n esperados*
+
+se Halla: $X_{k-r-1}^2, 1 - \alpha$
 > Tarea: Definir sistemas, cómo se clasifan, qué es un modelo (modelo matemático vs estadístico y qué tipos de modelos existen)
 
 
