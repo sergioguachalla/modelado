@@ -1,8 +1,8 @@
 # Parameters
-a = 211       # Multiplier
-b = 16       # Added constant
-m = 10 ** 8      # Modulus
-X0 = 13   # Initial value
+a = int(input("Ingresar multiplicador (a): "))
+b = int(input("Ingresar constante (b): "))
+m = int(input("Ingresar modulo (m): "))
+X0 = int(input("Ingresar valor inicial (X0): "))
 
 # Number of random numbers to generate
 n_terms = int(input("Cantidad de números: "))
@@ -16,4 +16,4 @@ for _ in range(n_terms - 1):
     random_numbers.append(X)
 
 # Display the results as an array
-print(f"Generated random numbers: {random_numbers}")
+print(f"Números generados: {random_numbers}")
