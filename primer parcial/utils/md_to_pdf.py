@@ -22,19 +22,32 @@ def list_markdown_files(directory):
 def convert_to_pdf(markdown_file, output_file):
     """Convert markdown file to PDF"""
     try:
-        # Read markdown content
         with open(markdown_file, 'r', encoding='utf-8') as f:
             markdown_content = f.read()
         
-        # Convert markdown to HTML
-        html_content = markdown2.markdown(markdown_content)
+        # Convert markdown to HTML with math support
+        html_content = markdown2.markdown(markdown_content, extras=['fenced-code-blocks', 'tables'])
         
-        # Add basic styling with proper UTF-8 encoding
+        # Replace LaTeX delimiters for MathJax
+        html_content = html_content.replace('$$', '$')
+        
         styled_html = f"""
         <html>
             <head>
                 <meta charset="UTF-8">
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <script type="text/javascript" async
+                    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+                </script>
+                <script type="text/x-mathjax-config">
+                    MathJax.Hub.Config({{
+                        tex2jax: {{
+                            inlineMath: [['$','$']],
+                            displayMath: [['$$','$$']],
+                            processEscapes: true
+                        }}
+                    }});
+                </script>
                 <style>
                     body {{ 
                         font-family: Arial, sans-serif; 
@@ -56,11 +69,15 @@ def convert_to_pdf(markdown_file, output_file):
         </html>
         """
         
-        # Convert HTML to PDF with options for encoding
+        # Add options for better PDF rendering
         options = {
             'encoding': 'UTF-8',
-            'enable-local-file-access': None
+            'enable-local-file-access': None,
+            'javascript-delay': 1000,  # Wait for MathJax to render
+            'no-stop-slow-scripts': None,
+            'enable-javascript': None
         }
+        
         pdfkit.from_string(styled_html, output_file, options=options, configuration=config)
         return True
     except Exception as e:
