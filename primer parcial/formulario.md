@@ -9,4 +9,73 @@ $LI = \frac{\chi^2_{1-\alpha/2};n-1}{12(n-1)}$
 
 $LS= \frac{\chi^2_{\alpha/2};n-1}{12(n-1)}$
 
-## Prueba de poker
+## Prueba de frecuencias
+$$H_0: x = U(0;1) $$
+$$H_i: x \neq U(0;1)$$
+$\LARGE{
+   \chi_c^2 = \frac{(n_{io}-n_{ie})^2}{n_{ie}} 
+}$
+
+$\large{
+RC: \chi_c^2 > \chi_{n-1}^2;1-\alpha; RH_0
+}$
+
+Donde $n = $ número de segmentos
+
+Para n = 5
+
+|$\large{N_{ie}}$|$\large{\frac{N}{n}}$| $\large{\frac{N}{n}}$|$\large{\frac{N}{n}}$|
+|---|---|---|---|
+|$\large{N_{io}}$| $\large{\frac{1}{n}}$|$\large{\frac{n-1}{n}}$|$\large{\frac{n}{n}}$
+
+## Prueba de Series
+$$H_0: x = U(0;1) $$
+$$H_i: x \neq U(0;1)$$
+$\LARGE{
+   \chi_c^2 = \frac{n^2}{N-1} \sum_i \sum_j (n_{io}- \frac{N-1}{n^2})
+}$
+
+$\Large{
+    x_{n2-1}^2;1-\alpha
+}$
+
+$\large{
+RC: \chi_c^2 > \chi_{n-1}^2;1-\alpha; RH_0
+}$
+
+|$\large{\frac{n-1}{n}}$|$\large{}a_{i_1j_1}$|$\large{}a_{i_1j_2}$|$\large{}a_{i_1j_3}$|
+|----|---|---|---|
+|$\large{\frac{n-2}{n}}$|
+|$\large{\frac{1}{n}}$|
+||$\large{\frac{1}{n}}$|$\large{\frac{2}{n}}$|$\large{\frac{n}{n}}$|
+
+Donde $\large{}a_{ij}$ es la cuenta de cuántos valores caen en el intervalo
+
+## Prueba de Kolmogorov
+$$H_0: x = U(0;1)$$
+$$H_1: x \neq U(0;1)$$
+$\Large{
+    D_n = max[F_n(x) - x_i]
+}$
+
+$\large{
+    RC: D_n < d_n; \alpha; N
+}$
+
+1. Generar números aleatorios
+2. Ordenar de forma ascendente
+3. Calcular:
+
+$$\large{
+    F_n(x) = \frac{i}{n}; i 
+}$$
+
+$$\large{
+    D_n = Max|F_n(x) - x_i| \forall x_i  
+}$$
+
+$$\large{
+    d_n=\sqrt{\frac{-\ln(\alpha/2)}{2n}}
+}
+$$
+

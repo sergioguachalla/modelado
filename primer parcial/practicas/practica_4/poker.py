@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib.pyplot as plt
+
 from collections import Counter
 from math import comb
 from scipy.stats import chi2
@@ -16,7 +18,7 @@ datos_str = """
 0.11386 0.62900 0.61609 0.37641 0.97121 0.71532 0.00482 0.96702 0.95287 0.30823
 0.33887 0.65388 0.08570 0.33943 0.03985 0.00514 0.05950 0.07925 0.54867 0.28632
 """
-
+random_numbers = np.random.rand(10000)
 # Convirtiendo el bloque de texto a una lista de floats:
 datos = []
 for linea in datos_str.strip().split('\n'):
@@ -145,3 +147,19 @@ if p_val < alpha:
 else:
     print(f"\nConclusión: No se rechaza H0 al nivel de significancia α={alpha}.")
     print("No hay evidencia suficiente para negar que sigan la distribución de póker.")
+
+
+data = random_numbers
+# Crear el histograma
+plt.hist(data, bins=20, edgecolor='black', color='skyblue')
+
+# Títulos y etiquetas
+plt.title("Histograma de los Datos")
+plt.xlabel("Valor")
+plt.ylabel("Frecuencia")
+
+# Guardar la imagen del gráfico
+plt.savefig("histograma.png")
+
+# Mostrar el gráfico
+plt.show()
