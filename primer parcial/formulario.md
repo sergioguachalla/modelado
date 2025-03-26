@@ -3,12 +3,20 @@
 $$H_0:\sigma^2=\frac{1}{12}$$
 $$H_i: \sigma^2 \neq \frac{1}{12}$$
 
-$X^2_c = \sum \frac{(n_{io} - n_{ie})^2}{n_{ie}}$
 
-$LI = \frac{\chi^2_{1-\alpha/2};n-1}{12(n-1)}$
+$\Large{LI = \frac{\chi^2_{1-\alpha/2};n-1}{12(n-1)}}$
 
-$LS= \frac{\chi^2_{\alpha/2};n-1}{12(n-1)}$
+$\Large{LS= \frac{\chi^2_{\alpha/2};n-1}{12(n-1)}}$
 
+> $N_{io}$ son los que caen dentro del intervalo
+
+Hallamos la varianza muestral:
+
+$\Large{
+    V(r) = \sum\frac{({r_i - \bar{r}})^2}{12(n-1)}
+}$
+
+> **Si la varianza muestral está dentro del límite no se rechaza la hipótesis nula**
 ## Prueba de frecuencias
 $$H_0: x = U(0;1) $$
 $$H_i: x \neq U(0;1)$$
@@ -79,3 +87,16 @@ $$\large{
 }
 $$
 
+## Prueba de uniformidad
+$$H_0: nros = U(0;1)$$
+$$H_i: nros \neq U(0;1)$$
+
+$\Large{
+    \chi_c^2 = \sum\frac{(n_{io}-n_{ie})^2}{n_{ie}}
+}$
+
+$\Large{RC: \chi_c^2 < \chi_{m-1}^2; 1-\alpha} | NRH_0$
+
+$\Large{
+    c = \frac{R}{\sqrt{n}} = \frac{max - min }{\sqrt{n}}
+}$
