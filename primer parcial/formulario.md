@@ -8,8 +8,6 @@ $\Large{LI = \frac{\chi^2_{1-\alpha/2};n-1}{12(n-1)}}$
 
 $\Large{LS= \frac{\chi^2_{\alpha/2};n-1}{12(n-1)}}$
 
-> $N_{io}$ son los que caen dentro del intervalo
-
 Hallamos la varianza muestral:
 
 $\Large{
@@ -28,7 +26,7 @@ $\large{
 RC: \chi_c^2 > \chi_{n-1}^2;1-\alpha; RH_0
 }$
 
-Donde $n = $ número de segmentos
+Donde $n =$ número de segmentos
 
 Para n = 5
 
@@ -100,3 +98,71 @@ $\Large{RC: \chi_c^2 < \chi_{m-1}^2; 1-\alpha} | NRH_0$
 $\Large{
     c = \frac{R}{\sqrt{n}} = \frac{max - min }{\sqrt{n}}
 }$
+
+|$\large{L_i - L_{i+1}}$|Conteo|$\large{n_{io}}$|$\large{n_{ie} = \frac{n}{m}}$|$\large{\frac{(n_{io} - n_{ie})^2}{n_{ie}}}$|
+|---|---|---|---|---|
+|$min - L_i + c$|a | a| b| c|
+|$\large{L_i - L_{i+1} + c}$|a | a| b| c|
+
+> Hasta tener el número de intervalos $n = datos, m = intervalos$
+
+## Prueba de poker
+$$H_0: nros = U(0;1)$$
+$$H_i: nros \neq U(0;1)$$
+
+$\Large{
+    \chi_c^2 = \sum\frac{(n_{io}-n_{ie})^2}{n_{ie}}
+}$
+
+$\Large{RC: \chi_c^2 > \chi_m-1^2; 1-\alpha} | RH_0$
+
+$\large{
+    P(diferentes) = 0,30240
+}$
+$\large{
+    P(par) = 0.50400
+}$
+$\large{
+    P(2\space\text{pares}) = 0,10800 
+}$
+$\large{
+    P(\text{tercia}) = 0,07200 
+}$
+$\large{
+    P(\text{full}) = 0,0009
+}$
+$\large{
+    P(\text{poker}) = 0,00450 
+}$
+$\large{
+    P(\text{quintilla}) = 0,0001 
+}$
+
+|Categoría|Conteo|$\large{n_{ie}}$|$\large{n_{io}}$|$\large{\frac{(n_{io} - n_{ie})^2}{n_{ie}}}$|
+|---|---|---|---|---|
+|${\text{todos diferentes}}$|a |$b = P(cat) \times n$| a|$\large{\frac{(a_i - b_i )^2}{b_i}}$|
+|${\text{Un par}}$|a | $b = P(cat) \times n$| b|$\large{\frac{(a_i - b_i )^2}{b_i}}$|
+|${\text{Dos pares}}$|a | $b = P(cat) \times n$| b|$\large{\frac{(a_i - b_i )^2}{b_i}}$|
+|${\text{tercia}}$|a | $b = P(cat) \times n$| $a$|$\large{\frac{(a_i - b_i )^2}{b_i}}$|
+|$Poker$|a | $b = P(cat) \times n$| b|$\large{\frac{(a_i - b_i )^2}{b_i}}$|
+|$Full$|a | $b = P(cat) \times n$| b|$\large{\frac{(a_i - b_i )^2}{b_i}}$|
+|$Quintilla$|a | $b = P(cat) \times n$| b|$\large{\frac{(a_i - b_i )^2}{b_i}}$|
+
+> $m = \text{las columnas que tienen datos}$
+
+## Prueba de la media
+$$H_0: \mu = \frac{1}{2}$$
+$$H_i: \mu \neq \frac{1}{2}$$
+
+$\Large{
+    Z_c = \frac{(\bar{x} - \mu)\sqrt{n}}{\sqrt{\frac{1}{12}}}
+}$
+
+$\large{
+    \text{Donde } \mu = \frac{1}{2} \text{ y } \bar{x} = \frac{\sum x_i}{n} 
+}$
+
+$\Large{
+   \text{Si } Z_c \text{ está dentro del intervalo } [-Z_{1-\alpha/2}; Z_{1-\alpha/2}] \text{ no se rechaza la hipótesis nula}
+}$
+## Pruebas de las corridas arriba y abajo
