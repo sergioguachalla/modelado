@@ -1,7 +1,91 @@
 # Formulario Modelado
+
+## Congruencial mixto
+$$X_{n+1} = (aX_n + c) \mod m $$
+    
+- $X_o$ : semilla $(Xo > 0)$
+- $a$: multiplicador $(a > 0)$
+- $c$ : constante aditiva $(c > 0)$
+- $m$: modulo $(m > Xo), m>a, m>c)$
+
+## Método congruencial multiplicativo
+
+$$X_{n+1} = ax_n \space mod \space m$$
+
+- $X_o$ : semilla $(Xo > 0)$
+- $a$: multiplicador $(a > 0)$
+- $m$: modulo $(m > Xo), m>a, m>c)$
+
+## Cuadrados medios
+Pasos:
+1. Seleccionar una semilla $(X_0)$ con $D$ dígitos ($D>3$)
+2. Sea $y_o =$ resultado de elevar $x_0$ al cuadrado.
+3. Sea $y_i =$ resultado de elevar $x_i$ al cuadrado y sera $r_i=0 ,$ D digitos del centro $\forall [=1,2,3...n]$
+4. Repetir el paso 3 hasta obtener los n números $r_i$ deseados
+## Productos medios
+$x_0 = a; \space x_1 = b; \space D = d$
+
+$y_0 = a \times b; \space x_2 = d \text{digitos del centro}; \space r_1 = 0,\{ d \}$ 
+
+
+## Prueba de hipotesis (distribucion exponencial)
+
+$$H_0: x = exp(\frac{1}{\lambda})$$
+$$H_1: x \neq exp(\frac{1}{\lambda})$$
+$\LARGE{
+   \chi_c^2 = \frac{(n_{io}-n_{ie})^2}{n_{ie}} 
+}$
+
+$\large{
+    n_{ie} = nP(X=x)
+}$
+
+$\Large{
+    f(x) = \frac{1}{\lambda}e^{-\lambda x} 
+}$
+
+$\large{
+    \lambda = ? \space => E(x) = \bar{x} \space \text{=>} \lambda = \bar{x}
+}$
+
+$\Large{
+    \bar{x} = \sum \frac{x_i n_i}{n}
+}$
+
+$\LARGE{
+    n_{ie} = n[-e^{\frac{-L_s}{\bar{x}}} + e^{\frac{-L_i}{\bar{x}}}]
+}$
+
+$\large{
+    RC: \chi_c^2 > \chi_{k-r-1}^2; RH_o
+}$
+
+>k = filas
+>r = parámetros de la distribución
+
+## Prueba de hipotesis (distribucion binomial)
+$$H_0: x = b(m;p)$$
+$$H_1: x \neq b(m;p)$$
+$\LARGE{
+   \chi_c^2 = \frac{(n_{io}-n_{ie})^2}{n_{ie}} 
+}$
+
+$\large{
+    n_{ie} = nD(X=x)
+}$
+
+$\Large{
+    P(x) = \binom{n}{x}\space p^k \space (1-p)^{n-k}
+}$
+
+$\large{
+    \binom{n}{x} = \frac{n!}{x! (n-x)!}
+}$
+
 ## Prueba de la Varianza
 $$H_0:\sigma^2=\frac{1}{12}$$
 $$H_i: \sigma^2 \neq \frac{1}{12}$$
+
 
 
 $\Large{LI = \frac{\chi^2_{1-\alpha/2};n-1}{12(n-1)}}$
@@ -165,4 +249,53 @@ $\large{
 $\Large{
    \text{Si } Z_c \text{ está dentro del intervalo } [-Z_{1-\alpha/2}; Z_{1-\alpha/2}] \text{ no se rechaza la hipótesis nula}
 }$
+
 ## Pruebas de las corridas arriba y abajo
+$$H_0: \text{son indenpendientes}$$
+$$H_i: \text{no son indenpendientes}$$
+
+$\Large{
+    Z_c = \mid \frac{C_o - \mu_{co}}{\sigma_{co}}\mid
+}$
+
+$\large{
+    RC: \mid Z_c\mid > Z_{1-\alpha} ; RH_o
+}$
+
+$
+\Large{
+    \mu_{co} = \frac{2n -1 }{3}
+}$
+
+$\Large{
+    \sigma^2 = \frac{16n - 29}{90}
+}$
+
+> $\large{\text{Si } r_{i-1} < r_i => 1}$
+
+> $\large{\text{Si } r_{i-1} > r_i => 0}$
+
+## Prueba de corridas media
+
+$$H_0: \text{son indenpendientes}$$
+$$H_i: \text{no son indenpendientes}$$
+
+$\Large{
+    Z_c= \frac{C_{o} - \mu_{co}}{\sigma_{co}}
+}$
+
+$\Large{
+    \mu_{co} = \frac{2n_0 \space n_1}{n} + \frac{1}{2}
+}$
+
+$\Large{
+    \sigma^2 = \frac{2n_0 \space n_1 \times (2n_0\space n_1 - n) }{n^2(n-1)}
+}$
+
+$\large{
+    RC: -Z_{1-\frac{\alpha}{2}} < Z_c < +Z_{1-\frac{\alpha}{2}}
+}$
+
+>Si está fuera se $RH_o$
+
+>$\large{\text{Si } r_1 > 0,5 => 1; 0}$
