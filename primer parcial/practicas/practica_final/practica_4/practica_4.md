@@ -26,3 +26,10 @@
 ### Resultado del script:
 
 ![alt text](imagenes/series_aleatorio.png)
+
+## Prueba de promedios (Clases)
+### Resultado del script
+
+## Prueba de promedios (Aleatorio)
+### Resultado del script
+![imagen](imagenes/promedios_aleatorio.png)
