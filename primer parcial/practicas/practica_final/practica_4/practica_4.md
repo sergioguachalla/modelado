@@ -71,6 +71,10 @@
 
 > [corresponde al script kolmogorov_clase.py ](scripts/kolmogorov_clase.py)
 
+## Prueba de kolmogorov (Aleatorio)
+### Resultado del script:
+![alt text](imagenes/kolmogorov_aleatorio.png)
+
 
 ## Prueba de uniformidad (Clase)
 ### Datos Clase:
